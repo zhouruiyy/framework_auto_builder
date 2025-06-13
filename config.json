@@ -1,0 +1,56 @@
+{
+    "framework_name": "MyFramework",
+    "version": "1.0.0",
+    "source_dir": "./src/MyFramework",
+    "output_dir": "./output_xcframework",
+    "author": "Your Name",
+    "email": "your.email@example.com",
+    "description": "An awesome iOS framework that does amazing things",
+    "homepage": "https://github.com/yourname/myframework",
+    "license": "MIT",
+    "minimum_ios_version": "12.0",
+    "swift_version": "5.0",
+    "build_settings": {
+        "enable_bitcode": false,
+        "enable_modules": true,
+        "defines_module": true,
+        "install_path": "@rpath",
+        "skip_install": false,
+        "build_library_for_distribution": true,
+        "architectures": ["arm64", "x86_64"],
+        "valid_archs": ["arm64", "x86_64"],
+        "product_name": "MyFramework",
+        "product_bundle_identifier": "com.example.myframework",
+        "deployment_target": "12.0",
+        "module_name": "MyFramework",
+        "module_map_file": "module.modulemap",
+        "header_search_paths": ["$(SRCROOT)/Headers"],
+        "other_cflags": "-fmodules",
+        "GENERATE_INFOPLIST_FILE": "YES",
+        "INFOPLIST_FILE": "$(SRCROOT)/Info.plist",
+        "INFOPLIST_KEY_CFBundleDisplayName": "MyFramework",
+        "INFOPLIST_KEY_CFBundleIdentifier": "com.example.myframework",
+        "INFOPLIST_KEY_CFBundleVersion": "1.0.0",
+        "INFOPLIST_KEY_CFBundleShortVersionString": "1.0.0"
+    },
+    "documentation": {
+        "generate_api_docs": true,
+        "generate_integration_guide": true,
+        "generate_changelog": true,
+        "include_code_examples": true,
+        "doc_format": "markdown"
+    },
+    "sample_project": {
+        "generate_sample": true,
+        "project_name": "MyFrameworkSample",
+        "bundle_id": "com.example.myframeworksample",
+        "include_ui_examples": true,
+        "include_unit_tests": true
+    },
+    "release": {
+        "create_zip": true,
+        "include_source": false,
+        "include_debug_symbols": false,
+        "sign_framework": false
+    }
+} 
